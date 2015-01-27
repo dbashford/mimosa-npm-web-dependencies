@@ -17,6 +17,8 @@ When `mimosa watch` and `mimosa build` starts (also for `npmweb` command, see be
 
 If the `main` file has no dependencies, like with, for instance, jquery (it is already bundled), then that file is copied into `vendor.javascripts` directory inside a folder named for the module.
 
+Note: This module does NOT install your NPM dependencies for you. NPM does a great job of that.
+
 ### Command: `mimosa npmweb`
 
 This module adds a new command, `mimosa npmweb`, to your project.  When executed, the `npmweb` command will inject NPM installed libraries into your web application's vendor directories.  The `npmweb` command ignores any cache and installs libraries whether they have changed or not.
