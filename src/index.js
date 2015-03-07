@@ -177,19 +177,19 @@ var _lifecycleInstall = function( mimosaConfig, options, next ) {
   }
 };
 
-var registerCommand = function ( program, retrieveConfig ) {
+var registerCommand = function ( program, _logger, retrieveConfig ) {
+  logger = _logger;
   program
-  .command( "npmweb" )
-  .option("-P, --profile <profileName>", "select a mimosa profile")
-  .description( "Pull your NPM-managed web dependencies into your app" )
-  .action( function( opts ){
-    opts.buildFirst = false;
-    retrieveConfig( opts, function( mimosaConfig ) {
-      logger = mimosaConfig.log;
-      _loadPackageJSONDeps( mimosaConfig );
-      _process( mimosaConfig );
+    .command( "npmweb" )
+    .option("-P, --profile <profileName>", "select a mimosa profile")
+    .description( "Pull your NPM-managed web dependencies into your app" )
+    .action( function( opts ){
+      opts.buildFirst = false;
+      retrieveConfig( opts, function( mimosaConfig ) {
+        _loadPackageJSONDeps( mimosaConfig );
+        _process( mimosaConfig );
+      });
     });
-  });
 };
 
 var registration = function (mimosaConfig, register) {
