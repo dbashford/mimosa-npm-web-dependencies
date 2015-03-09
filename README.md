@@ -49,3 +49,12 @@ npmWeb: {
   modules: ["chai", "jquery", "when"]
 }
 ```
+
+## Running Tests
+
+* `git pull` project
+* `cd mimosa-npm-web-dependencies`
+* `mimosa mod:install`
+* `cd test/test-project`
+* `npm install`
+* `mimosa npmweb`

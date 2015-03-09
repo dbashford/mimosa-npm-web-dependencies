@@ -1,6 +1,6 @@
 {
   "name": "mimosa-npm-web-dependencies",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "http://www.mimosa.io",
   "author": "David Bashford",
   "description": "A Mimosa module to bundle NPM dependencies for use in your web app using browserify",

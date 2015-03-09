@@ -1,0 +1,10 @@
+{
+  "name": "test-project",
+  "version": "0.0.1",
+  "description": "A Mimosa starter skeleton",
+  "dependencies": {
+    "chai":"*",
+    "jquery":"*",
+    "when":"*"
+  }
+}
